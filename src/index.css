@@ -1,0 +1,21 @@
+:root {
+  --font-sans: "Overused Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  --font-serif: Georgia, Times, serif;
+  --font-mono: Menlo, Courier, monospace;
+  font-family: "Overused Grotesk";
+}
+
+li:hover{
+  color: #656565;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Overused Grotesk";
+  src: url("fonts/OverusedGrotesk-VF.woff2") format("woff2 supports variations"),
+    url("fonts/Overused-Grotesk/woff2/OverusedGrotesk-Medium.woff2")
+      format("woff2-variations");
+  font-weight: 200 900;
+}
