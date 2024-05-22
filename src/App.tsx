@@ -459,6 +459,7 @@ function App() {
                         value={formData.xaritajoynomi}
                         onChange={(event, newValue) => {
                           if (typeof newValue === "string") {
+                            event = event
                             setValue(newValue);
                             setFormData((prevData) => ({
                               ...prevData,
@@ -484,6 +485,7 @@ function App() {
                         }}
                         onInputChange={(event, newInputValue) => {
                           if (newInputValue) {
+                            event = event
                             setValue(newInputValue);
                           }
                         }}
