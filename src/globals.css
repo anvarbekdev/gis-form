@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#050505] border-gray-500 text-[#ffffff];
   }
 }
 
@@ -84,7 +84,7 @@
 .numbers div > .step {
   height: 30px;
   aspect-ratio: 1;
-  background-color: #e7e7e7;
+  background-color: #212121;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -93,7 +93,7 @@
 }
 
 .numbers div > .active {
-  background-color: #7950f2;
+  background-color: #450def;
   color: #fff;
 }
 .numbers div > .finish {

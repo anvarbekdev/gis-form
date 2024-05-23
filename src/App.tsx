@@ -44,7 +44,7 @@ import {
 const API_KEY = "a9574d29-a9a4-4ce6-b3bf-99919499ad18";
 
 const center = [47.2313, 39.7233];
-const images = [...Array(5)].map(( i) => {
+const images = [...Array(5)].map((i) => {
   const letter = String.fromCharCode(i + 97);
   return `https://img.icons8.com/ios-filled/2x/marker-${letter}.png`;
 });
@@ -324,11 +324,11 @@ function App() {
             ))}
           </div>
 
-          <div className="md:mt-14  sm:mt-0 xl:max-w-full mx-auto md:max-w-xl md:border-2 md:p-12 sm:p-4 rounded-xl md:bg-[#212124] ">
+          <div className="md:mt-14  sm:mt-0 xl:max-w-full mx-auto md:max-w-xl md:border md:p-12 sm:p-4 rounded-xl md:bg-[#212124] ">
             <div className="">
               {step == 1 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Joy haqida
                   </h1>
 
@@ -347,7 +347,7 @@ function App() {
                     title="This a Tooltip"
                     titledesc="Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function or alt-text."
                     icon={<QuestionMarkCircledIcon color="grey" />}
-                    className="bg-transparent "
+                    className="bg-transparent"
                     placeholder="Mini Market"
                   />
                   <div className=" text-sm text-red-500">
@@ -382,7 +382,7 @@ function App() {
               )}
               {step == 2 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Joy rasimlari
                     <TooltipProvider>
                       <Tooltip>
@@ -405,7 +405,7 @@ function App() {
 
                   <div className="flex gap-2 lg:justify-start sm:justify-center">
                     <div className="lg:block sm:hidden bg-grey-lighter">
-                      <label className="w-44 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-xl shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+                      <label className="w-44 flex flex-col items-center px-4 py-6  text-blue rounded-xl shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                         <img src={file} alt="fileimg" />
                         <input
                           type="file"
@@ -416,7 +416,7 @@ function App() {
                     </div>
                     {formData?.image?.length === 0 && (
                       <div className="lg:hidden sm:block bg-grey-lighter">
-                        <label className="w-44 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-xl shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+                        <label className="w-44 flex flex-col items-center px-4 py-6  text-blue rounded-xl shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                           <img src={file} alt="fileimg" />
                           <input
                             type="file"
@@ -440,7 +440,7 @@ function App() {
               )}
               {step == 3 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Joylashuv ma'lumotlari
                   </h1>
 
@@ -454,12 +454,12 @@ function App() {
                     >
                       <Autocomplete
                         freeSolo
-                        className="mb-4"
+                        className="mb-4 text-white"
                         filterOptions={(x) => x}
                         value={formData.xaritajoynomi}
                         onChange={(event, newValue) => {
                           if (typeof newValue === "string") {
-                            event = event
+                            event = event;
                             setValue(newValue);
                             setFormData((prevData) => ({
                               ...prevData,
@@ -485,7 +485,7 @@ function App() {
                         }}
                         onInputChange={(event, newInputValue) => {
                           if (newInputValue) {
-                            event = event
+                            event = event;
                             setValue(newInputValue);
                           }
                         }}
@@ -494,7 +494,9 @@ function App() {
                         )}
                         renderInput={(params) => (
                           <TextField
+                            className=" bg-slate-200 rounded-md"
                             {...params}
+                            
                             label="Joy manzilini kiriting"
                           />
                         )}
@@ -630,7 +632,7 @@ function App() {
               )}
               {step == 4 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Joy turi
                     <TooltipProvider>
                       <Tooltip>
@@ -673,7 +675,7 @@ function App() {
               )}
               {step == 5 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Ish vaqtlari
                     <TooltipProvider>
                       <Tooltip>
@@ -748,7 +750,7 @@ function App() {
               )}
               {step == 6 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Havolalar
                     <TooltipProvider>
                       <Tooltip>
@@ -828,7 +830,7 @@ function App() {
               )}
               {step == 7 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Qo'shimcha ma'lumotlar
                     <TooltipProvider>
                       <Tooltip>
@@ -870,7 +872,7 @@ function App() {
               )}
               {step == 8 && (
                 <>
-                  <h1 className="mb-8 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
+                  <h1 className="mb-8 text-gray-200 xl:text-3xl flex items-center sm:text-2xl gap-2 border-b pb-3">
                     Arizachi ma'lumoti
                   </h1>
 
@@ -901,7 +903,7 @@ function App() {
                 </Button>
               )}
               <Button
-                styleClass={`border-2 ml-6  border-blue-800 hover:bg-white bg-blue-800 px-3 py-2 rounded-xl`}
+                styleClass={`border-2 ml-6  border-blue-800 hover:bg-transparent bg-blue-800 px-3 py-2 rounded-xl`}
                 onClick={() => {
                   if (step === 1) {
                     const validationResult = Step1Schema.safeParse(formData);
@@ -970,7 +972,7 @@ function App() {
         >
           {step != 1 && (
             <Button
-              styleClass={`border-2 border-blue-800 hover:bg-blue-800 px-3 py-2 rounded-xl`}
+              styleClass={`border border-blue-800 hover:bg-blue-800 px-3 py-2 rounded-xl`}
               onClick={handlePrevious}
             >
               <ArrowLeftIcon className="mr-2 size-5 inline-block" />
@@ -978,7 +980,7 @@ function App() {
             </Button>
           )}
           <Button
-            styleClass={`border-2 md:mr-0  border-blue-800 hover:bg-white bg-blue-800 px-3 py-2 rounded-xl`}
+            styleClass={`border md:mr-0 hover:bg-transparent bg-blue-800 border-blue-800  px-3 py-2 rounded-xl`}
             onClick={() => {
               if (step === 1) {
                 const validationResult = Step1Schema.safeParse(formData);
