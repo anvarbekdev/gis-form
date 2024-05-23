@@ -255,9 +255,7 @@ function App() {
 
   return (
     <div
-      className={`max-w-6xl relative mx-auto flex flex-col justify-between ${
-        step == 5 ? "h-[200vh]" : "min-h-screen"
-      }`}
+      className={`max-w-6xl relative mx-auto flex flex-col justify-between `}
     >
       <div>
         <Navbar />
