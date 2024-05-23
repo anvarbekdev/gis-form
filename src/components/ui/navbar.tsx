@@ -1,5 +1,5 @@
-import { useState } from "react";
-import ReactFlagsSelect from "react-flags-select";
+// import { useState } from "react";
+// import ReactFlagsSelect from "react-flags-select";
 import logo from "../../assets/logo.png";
 import "../../globals.css";
 import {
@@ -11,7 +11,7 @@ import {
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const Navbar = () => {
-  const [flagSelected, setFlagSelected] = useState("UZ");
+  // const [flagSelected, setFlagSelected] = useState("UZ");
 
   return (
     <div className=" border-b h-20 flex mx-auto xl:justify-between justify-around">
